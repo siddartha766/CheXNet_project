@@ -2,10 +2,10 @@
 # Clinical Pneumonia Detection via Transfer Learning and XAI
 
 ## Project Overview
-Welcome to my Pneumonia Detection project. This repository contains the codebase for a deep learning diagnostic tool built to detect pneumonia from frontal-view chest X-ray images. 
 
-My primary focus for this project wasn't just to achieve strong quantitative metrics (like AUROC), but to build a clinically trustworthy model. To ensure the AI was making decisions based on actual pathology rather than background noise, I heavily integrated Explainable AI (XAI) into the evaluation pipeline.
-
+* This project focuses on building a pneumonia detection model that is not only accurate but also clinically trustworthy. Rather than focusing solely on quantitative metrics like AUROC, the project prioritizes Explainable AI (XAI) to verify that the model’s decisions are based on actual clinical pathology rather than image artifacts. The project utilizes the PyTorch framework to develop and DenseNet-121 architecture to detect pneumonia from chest X-rays. 
+* This repository contains the codebase for a deep learning diagnostic tool built to detect pneumonia from frontal-view chest X-ray images.
+  
 ## Dataset Context
 * The data used in this project is a targeted subset derived from the **NIH ChestX-ray14 Dataset**. 
 * The original dataset contains over 112,000 frontal-view X-ray images of 30,805 patients extracted from the clinical  database at the National Institutes of Health.
@@ -21,6 +21,12 @@ The architecture utilizes a pre-trained convolutional neural network (DenseNet-1
 A core component of this pipeline is the use of **Grad-CAM** (Gradient-weighted Class Activation Mapping) to audit the model's spatial attention. 
 
 In clinical AI, high accuracy scores can sometimes hide data leakage or "shortcut learning." By generating Grad-CAM heatmaps for the test images, I was able to successfully validate that the model correctly targets pulmonary opacities within the thoracic cavity. The visual attention maps align closely with true anatomical markers, confirming that the model has learned the actual clinical features of pneumonia rather than relying on dataset artifacts.
+
+## Development Methodology and References
+* This implementation is based on the methodology established in the CheXNet framework Research paper (Rajpurkar et al., 2017).
+  
+* Throughout the development process, AI tools were used to assist with code structure, optimization, and documentation to ensure high-quality, modular software.
+
 
 ## Current Constraints & Future Scope
 1. **Computational Limits:** Due to immediate compute and time constraints, the Phase 2 fine-tuning was done until 4 epochs. While this successfully proved the core pipeline and yielded strong Grad-CAM results, deeper convergence (50+ epochs) is planned for future iterations.
