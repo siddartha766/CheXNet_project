@@ -25,7 +25,7 @@ In clinical AI, high accuracy scores can sometimes hide data leakage or "shortcu
 ## Development Methodology and References
 * This implementation is based on the methodology established in the CheXNet framework Research paper (Rajpurkar et al., 2017).
   
-* Throughout the development process, AI tools were used to assist with code structure, optimization, and documentation to ensure high-quality, modular software.
+* AI Tools were used for assistance
 
 
 ## Current Constraints & Future Scope
