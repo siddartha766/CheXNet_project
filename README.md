@@ -25,3 +25,18 @@ In clinical AI, high accuracy scores can sometimes hide data leakage or "shortcu
 ## Current Constraints & Future Scope
 1. **Computational Limits:** Due to immediate compute and time constraints, the Phase 2 fine-tuning was done until 4 epochs. While this successfully proved the core pipeline and yielded strong Grad-CAM results, deeper convergence (50+ epochs) is planned for future iterations.
 2. **Infrastructure Upgrades**:Future work will focus on extending training for higher precision and code modifications.
+
+## Repository Structure & File Guide
+To facilitate future development and reproducibility, the codebase is modularized. Here is a guide to navigating the scripts:
+
+* `cell_1.py` - [Environment initialization, core dependency imports, and CUDA/GPU hardware acceleration configuration.]
+* `cell_2.py` - [Environment verification and directory mapping]
+* `cell_3.py` - [Dataset indexing, binary target extraction, and strict patient-level dataset splitting (Train/Val/Test) to prevent clinical data leakage.]
+* `cell_4.py` - [Image preprocessing and robust data augmentation pipelines to standardize inputs and prevent model overfitting.]
+* `cell_5.py` - [Custom PyTorch Dataset and DataLoader classes to handle batching, transformations, and memory-efficient tensor feeding to the GPU.]
+* `cell_6.py` - [Data pipeline verification,and visual sanity checking to validate the augmentation process.]
+* `cell_7.py` - [DenseNet-121 Transfer Learning with Custom Pneumonia binary Classification Head.]
+* `cell_8.py` - [Training Configuration: Weighted BCE Loss Implementation for Class Imbalance and Adam Optimizer Setup.]
+* `cell_9.py` - [Master Training Loop: Model training, validation, dynamic LR scheduling, and checkpoint-based fault tolerance.]
+* `cell_10.py` - [Model Evaluation: Final clinical performance assessment, AUROC computation, and confusion matrix visualization.]
+* `cell_11.py` - [Model Explainability: Implementation of Grad-CAM, Guided Backpropagation, and Guided Grad-CAM for clinical visualization.]
