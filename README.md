@@ -7,9 +7,9 @@ Welcome to my Pneumonia Detection project. This repository contains the codebase
 My primary focus for this project wasn't just to achieve strong quantitative metrics (like AUROC), but to build a clinically trustworthy model. To ensure the AI was making decisions based on actual pathology rather than background noise, I heavily integrated Explainable AI (XAI) into the evaluation pipeline.
 
 ## Dataset Context
-* The data used in this project is a targeted subset derived from the **NIH ChestX-ray14 Dataset**[cite: 14]. 
-* The original dataset contains over 112,000 frontal-view X-ray images of 30,805 patients extracted from the clinical  database at the National Institutes of Health[cite: 9, 13].
-* While the full dataset includes 14 different thoracic pathologies[cite: 14], this project specifically isolates the **Pneumonia** diagnostic track to optimize the model's classification head for a single, critical disease.
+* The data used in this project is a targeted subset derived from the **NIH ChestX-ray14 Dataset**. 
+* The original dataset contains over 112,000 frontal-view X-ray images of 30,805 patients extracted from the clinical  database at the National Institutes of Health.
+* While the full dataset includes 14 different thoracic pathologies, this project specifically isolates the **Pneumonia** diagnostic track to optimize the model's classification head for a single, critical disease.
 
 ## Methodology & Training Strategy
 The architecture utilizes a pre-trained convolutional neural network (DenseNet-121) adapted for medical imaging. To ensure stable learning, I implemented a two-phase training pipeline:
