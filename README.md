@@ -24,4 +24,4 @@ In clinical AI, high accuracy scores can sometimes hide data leakage or "shortcu
 
 ## Current Constraints & Future Scope
 1. **Computational Limits:** Due to immediate compute and time constraints, the Phase 2 fine-tuning was done until 4 epochs. While this successfully proved the core pipeline and yielded strong Grad-CAM results, deeper convergence (50+ epochs) is planned for future iterations.
-2. **Infrastructure Upgrades:**Future work will focus on extending training for higher precision and code modifications.
+2. **Infrastructure Upgrades**:Future work will focus on extending training for higher precision and code modifications.
